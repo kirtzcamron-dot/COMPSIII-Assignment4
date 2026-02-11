@@ -33,5 +33,14 @@ class UndergraduateStudent(Student):
             print(f"{self.name} is not in good academic standing.")
 
 class GraduateStudent(Student):
-    # Delete this and write your code here
-    pass
+
+    def __str__(self):
+        return f"{self.name} is a graduate student studying {self.major}."
+
+    def is_in_good_standing(self):
+        average = self.calculate_average_gpa()
+
+        if average >= 3.0:
+            print(f"{self.name} is in good academic standing.")
+        else:
+            print(f"{self.name} is not in good academic standing.")
