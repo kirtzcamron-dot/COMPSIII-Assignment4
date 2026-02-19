@@ -17,7 +17,7 @@ class Student:
         return sum(self.__gpa_for_semesters) / len(self.__gpa_for_semesters)
 
     def is_in_good_standing(self):
-        print(f"{self.name} is a student.")
+        return f"{self.name} is a student."
 
 class UndergraduateStudent(Student):
 
@@ -28,9 +28,9 @@ class UndergraduateStudent(Student):
         average = self.calculate_average_gpa()
 
         if average >= 2.5:
-            print(f"{self.name} is in good academic standing.")
+            return f"{self.name} is in good academic standing."
         else:
-            print(f"{self.name} is not in good academic standing.")
+            return f"{self.name} is not in good academic standing."
 
 class GraduateStudent(Student):
 
@@ -41,6 +41,6 @@ class GraduateStudent(Student):
         average = self.calculate_average_gpa()
 
         if average >= 3.0:
-            print(f"{self.name} is in good academic standing.")
+            return f"{self.name} is in good academic standing."
         else:
-            print(f"{self.name} is not in good academic standing.")
+            return f"{self.name} is not in good academic standing."
